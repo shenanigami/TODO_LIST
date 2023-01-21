@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.min.css"/>
+    <!-- type module cuz using imports-->
+    <script src="js/main.js" type="module"></script>
     <title>To Do List</title>
 </head>
 <body>
@@ -33,7 +35,7 @@
             <!-- div for just the top of the list 
                 NOTE: You really want only one H1 per page -->
             <div class="listTitle">
-               <h1>To Do List</h1> 
+               <h1 tabindex="0">To Do List</h1> 
                <button id="clearItems" class="button" title="Clear the list." aria-label="Remove all items from the list" tabindex="0">Clear</button>
             </div>
             <!-- horizontal rule element; doesn't have its own closing tag-->
@@ -46,6 +48,7 @@
                     <label for="1">to do item 1</label>
                 </div>
             </div>
+            <p id="confirmation" class="confirmation" aria-live="assertive"></p>
 
         </section>
    </main> 
