@@ -1,0 +1,56 @@
+$default-font-color:#000;
+$background-color: #00b4d8;
+$container-bgcolor: #f2f2f2;
+$container-bordercolor: #000;
+$textbox-bordercolor: lightgray;
+$button-textcolor-light: #fff;
+$button-textcolor-dark: #292b3d;
+$button-hovercolor: #000;
+$add-button-color: #4caf50;
+$clear-button-color: #caf0f8;
+
+@mixin mq($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+// reset. * means select all
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// basics for the page
+html, body {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    color: $default-font-color;
+    width: 100%;
+    min-height: 100%;
+    // 768 px is ipad size
+    @include mq(768px) {
+        font-size: 22px;
+    }
+
+}
+
+body {
+    padding: 20px;
+    background-color: $background-color;
+}
+
+section {
+    background-color: $container-bgcolor;
+    width: 90%;
+    // if goes to larger screen, don't want to continue growing
+    // beyond 700px
+    max-width: 700px;
+    // centered by default
+    margin: auto;
+    border: 1px solid $container-bordercolor;
+    border-radius: 10px;
+
+}
+

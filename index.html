@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- viewport line will help our project to be more responsive --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.min.css"/>
+    <title>To Do List</title>
+</head>
+<body>
+   <main>
+        <section class="newItemEntry">
+            <form id="itemEntryForm">
+                <label for="newItem">Enter a new to do item</label>
+    <!-- size is for number of characters, autocomplete is for suggestions.
+        tabindex: Part of keyboard index when you tab through the items. 
+        input has not closing tag; need to close with /> --> 
+                <input id="newItem" type="text" size="40" autocomplete="off"
+                placeholder="Add Item" tabindex="0"/>
+
+    <!-- title: when you mouse over, text will popup 
+         aria-label: description of a button for a screen reader mode --> 
+                <button id="addItem" class="button" title="Add new item" aria-label="Add new item to list" tabindex="0">+</button>
+            </form>
+        </section>
+
+        <section class="listContainer">
+            <!-- div for just the top of the list 
+                NOTE: You really want only one H1 per page -->
+            <div class="listTitle">
+               <h1>To Do List</h1> 
+               <button id="clearItems" class="button" title="Clear the list." aria-label="Remove all items from the list" tabindex="0">Clear</button>
+            </div>
+            <!-- horizontal rule element; doesn't have its own closing tag-->
+            <hr />
+            <!-- for the list itself
+                the rest is dynamically created with javascript-->
+            <div id="listItems">
+                <div class="item">
+                    <input type="checkbox" id="1" tabindex="0">
+                    <label for="1">to do item 1</label>
+                </div>
+            </div>
+
+        </section>
+   </main> 
+</body>
+</html>

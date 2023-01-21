@@ -1,0 +1,58 @@
+// for list container styles
+
+// class
+.listContainer {
+    // 60% of viewport height
+    min-height: 30vh;
+    padding: 0.75rem;
+
+    .listTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        button {
+            font-size: 1rem;
+            background-color: $clear-button-color;
+            color: $background-color;
+            padding: 0 0.1rem;
+            margin-bottom: 0.5rem;
+
+            @include mq(768px) {
+                padding: 0 0.5rem;
+            }
+        }
+
+        hr {
+            // within the container
+            width: 100%;
+        }
+    }
+
+    .item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 1rem;
+
+        input[type="checkbox"] {
+            text-align: center;
+            width: 2.5rem;
+            min-width: 48px;
+            height: 2.5rem;
+            min-height: 48px;
+            cursor: pointer;
+            // give some space fort between the checkbox and the label
+            margin-right: 1.5rem;
+        }
+
+        // when tabbing through want to underline the todo labels
+        input[type="checkbox"]:focus + label {
+            text-decoration: underline;
+        }
+
+        label {
+            font-size: 1.4rem;
+        }
+    }
+}
